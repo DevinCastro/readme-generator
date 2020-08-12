@@ -58,16 +58,16 @@ const questions = [
 
 const inquirer = require('inquirer')
 const fs = require('fs')
-// const generatePortfolio = require('./portfolio')
+const generateMarkdown = require('./generateMarkdown.js')
+
 
 // function to write README file
-// function writeToFile(fileName, data) {
-//   fs.writeFile('portfolio.html', generatePortfolio(answers), (err) => {
-//     if (err) { console.log(err) }
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, (err) => {
+    if (err) { console.log(err) }
 
-
-//   })
-// }
+  })
+}
 
 
 
@@ -78,7 +78,8 @@ inquirer
     questions
   )
   .then(answers => {
-
+    writeToFile('newReadMe.md', generateMarkdown(answers))
+    console.log('File Created!')
   })
   .catch(error => {
     if (error.isTtyError) {
