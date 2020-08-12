@@ -37,7 +37,7 @@ const questions = [
   {
     type: 'list',
     message: 'Which license did you use?',
-    choices: ["MIT", "APACHE2.0", "GPL3.0", "BSD3", "None"]
+    choices: ["MIT", "APACHE2.0", "GPL3.0", "BSD3", "None"],
     name: 'license',
   },
 
@@ -74,13 +74,11 @@ const fs = require('fs')
 
 
 inquirer
-  .prompt([
+  .prompt(
     questions
-
-  ])
+  )
   .then(answers => {
 
-   
   })
   .catch(error => {
     if (error.isTtyError) {
