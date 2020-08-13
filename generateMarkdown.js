@@ -18,19 +18,19 @@ function generateMarkdown(answers) {
 ## Description:
 > ${answers.description}
 
-# Installation:
+### Installation:
 ${answers.installation}
 
-# Usage:
+### Usage:
 ${answers.usage}
 
-# Contributing:
+### Contributing:
 ${answers.contribution}
 
-# Tests:
+### Tests:
 ${answers.test}
 
-# Questions:
+### Questions:
 Contact me for questions at:
 **GitHub:**
 [${answers.github}](https://github.com/${answers.github})
