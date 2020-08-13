@@ -1,5 +1,6 @@
 // function to generate markdown for README
 function generateMarkdown(answers) {
+  // return the following.  This content will be in the form of a markdown file, have the proper syntax, and include all the respectful values of the users input.
   return `
 
 # ${answers.title}
@@ -38,4 +39,6 @@ ${answers.email}
 `
 }
 
+
+// export
 module.exports = generateMarkdown

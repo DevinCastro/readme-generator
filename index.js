@@ -56,12 +56,16 @@ const questions = [
   
 ];
 
+// first we need to import the following npm to use for prompting the user in the terminal
 const inquirer = require('inquirer')
+// Import the filsystem framework so we can use the writeFile function
 const fs = require('fs')
+// Import the module export from the generateMarkdown.js file
 const generateMarkdown = require('./generateMarkdown.js')
 
 
 // function to write README file
+// pass in two parameters, first the name of the file we want to write and then the content of what we want to write
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) => {
     if (err) { console.log(err) }
@@ -70,14 +74,14 @@ function writeToFile(fileName, data) {
 }
 
 
-
-
-
+// Use the inquirer.prompt function to promp the user with the questions
 inquirer
   .prompt(
     questions
   )
+  // the input of the users will be store in the 'answers' object and then we do the following
   .then(answers => {
+    // call the writeToFile function and create a markdown file called newReadMe.md, and pass the content of the generateMarkdown function with the answers parameter.
     writeToFile('newReadMe.md', generateMarkdown(answers))
     console.log('File Created!')
   })
@@ -87,5 +91,4 @@ inquirer
     } else {
       // Something else when wrong
     }
-  });
-
+  })
