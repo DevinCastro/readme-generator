@@ -13,7 +13,7 @@ const questions = [
   {
     type: 'input',
     message: 'Enter the installation instructions',
-    name: 'bio',
+    name: 'installation',
   },
 
   {
