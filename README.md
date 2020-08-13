@@ -1,6 +1,7 @@
 # readme-generator
 
 Link to Video: https://youtu.be/rlm4jt1o7sI
+
 Link to sample generated readme: https://github.com/DevinCastro/sample-readme
 
 ## Description:
